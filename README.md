@@ -1,2 +1,18 @@
-# Wine-Classification-Deep-Learning
-Multi-class wine classification using a Keras neural network. Predicts one of 3 wine cultivars from 13 chemical features (alcohol, flavanoids, proline, etc.) with softmax output, StandardScaler (no data leakage) and Adam optimizer. ~100% accuracy on the test split of the scikit-learn Wine dataset.
+# Wine Classification using Deep Learning
+
+A Keras neural network that classifies wines into 3 classes using 13
+chemical measurements (alcohol, flavanoids, proline, etc.).
+
+## Model
+- Input (13 features) -> Dense(8, ReLU) -> Dense(3, Softmax)
+- Optimizer: Adam, Loss: Sparse Categorical Crossentropy
+- StandardScaler (fit on training data only), 50 epochs, batch size 4
+
+## Results
+- Test accuracy: about 100% on 36 test samples
+- Training and validation loss decrease together (no overfitting)
+
+## Dataset
+The Wine dataset from scikit-learn (178 real samples, 3 classes).
+It is a clean, easy dataset, so high accuracy is common here and
+does not reflect performance on harder real-world data.
